@@ -53,3 +53,8 @@ docker-compose logs -f        # Ver logs
 ---
 
 ¡Listo para usar!
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia [MIT](./LICENSE).  
+Consulta el archivo `LICENSE` para más detalles.
