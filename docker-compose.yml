@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   todolist:
     build: todolist
@@ -23,7 +24,13 @@ services:
       MYSQL_PASSWORD: 1234
       MYSQL_DATABASE: todo_db
     restart: always
+    volumes:
+      - todolist_mysql_data:/var/lib/mysql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 10s
       retries: 10
+
+volumes:
+  todolist_mysql_data:
+    name: todolist_mysql_data
